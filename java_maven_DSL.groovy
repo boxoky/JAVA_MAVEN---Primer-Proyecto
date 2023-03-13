@@ -20,7 +20,7 @@ job("Java maven app with DSL"){
         //Test it
         maven{
             mavenInstallation("maven-jenkins")
-            goals("tests")
+            goals("test")
         }
         //Run it
         shell('''
