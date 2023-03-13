@@ -24,13 +24,13 @@ job("Java maven app with DSL"){
         }
         //Run it
         shell('''
-            java -jar "/var/jenkins_home/workspace/Java Maven App DSL/target/my-app-1.0-SNASHOT.jar" 
+            java -jar "/var/jenkins_home/workspace/Java Maven App DSL/target/my-app-1.0-SNAPSHOT.jar" 
         ''')
     }
 
     //What after the app will do?
     publishers{
-        archiveArtifacts("target/*.jar")                //Take every .jar generated and make them avalaible in Jenkins
+        archiveArtifacts("./target/*.jar")                //Take every .jar generated and make them avalaible in Jenkins
         archiveJunit("target/surefire-reports/*.xml")   //Take every .xml generated and make them avalaible in Jenkins
         //Notifiers (slack messages)
         slackNotifier {
