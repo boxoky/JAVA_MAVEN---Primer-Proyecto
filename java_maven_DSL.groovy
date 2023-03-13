@@ -24,7 +24,7 @@ job("Java maven app with DSL"){
         }
         //Run it
         shell('''
-            java -jar "/var/jenkins_home/workspace/Java Maven App DSL/target/my-app-1.0-SNAPSHOT.jar" 
+            java -jar "/var/jenkins_home/workspace/Java maven app with DSL/target/my-app-1.0-SNAPSHOT.jar" 
         ''')
     }
 
