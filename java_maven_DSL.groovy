@@ -11,7 +11,7 @@ job("Java maven app with DSL"){
     }
 
     //The nature app and how will build and run it - Javen Maven
-    setps{
+    steps{
         //Build it
         maven{
             mavenInstallation("mavenJenkins")
