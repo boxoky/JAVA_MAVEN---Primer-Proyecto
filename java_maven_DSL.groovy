@@ -14,12 +14,12 @@ job("Java maven app with DSL"){
     steps{
         //Build it
         maven{
-            mavenInstallation("mavenJenkins")
+            mavenInstallation("maven-jenkins")
             goals("-B -DskipTests clean package")
         }
         //Test it
         maven{
-            mavenInstallation("mavenInstallation")
+            mavenInstallation("maven-jenkins")
             goals("tests")
         }
         //Run it
