@@ -3,7 +3,7 @@ job("Java maven app with DSL"){
     description("This app will be builded on kenkins with the help of DSL")
 
     //Where Jenkins will the code have?
-    smc{
+    scm{
         git("https://github.com/macloujulian/simple-java-maven-app.git", "master") { node ->
             node / gitConfigName("Marco Antonio Ag")
             node / gitConfigEmail("marcontonio.98@hotmail.com")
