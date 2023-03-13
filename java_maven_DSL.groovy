@@ -30,9 +30,10 @@ job("Java maven app with DSL"){
 
     //What after the app will do?
     publishers{
-        archiveArtifacts("./target/*.jar")                //Take every .jar generated and make them avalaible in Jenkins
+        archiveArtifacts("target/*.jar")                //Take every .jar generated and make them avalaible in Jenkins
         archiveJunit("target/surefire-reports/*.xml")   //Take every .xml generated and make them avalaible in Jenkins
         //Notifiers (slack messages)
+        mailer('marcontonio.98@hotmail.com', false, true)
         slackNotifier {
             notifyAborted(true)
             notifyEveryFailure(true)
